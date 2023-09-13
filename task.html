@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Hyperlink For k7fry</h1>
+
+<p id="demo"></p>
+<form onsubmit="return setAction(this)">
+  <div>
+    <label>https://k7fry.com/grid/?qth=</label>
+
+    <input id="textbox_id" name="hyperlinktext" type="text" value="xxxxxx">
+  </div>
+  <div>
+    <input id="submit" type="submit" value="Go to website">
+  </div>
+</form>
+
+
+<script>
+function setAction(form) {
+  let a$ = document.getElementById('textbox_id').value
+  let length = a$.length;
+  if (a$.length != 6) 
+  	alert("Please write 6 letters to the form" + a$.length);
+  else
+  	form.action = "https://k7fry.com/grid/?qth=" + a$;
+  <!-- alert(form.action); -->
+  <!-- return false; -->
+}
+</script>
+
+</body>
+</html> 
